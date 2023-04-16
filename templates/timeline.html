@@ -1,0 +1,19 @@
+{{ define "timeline" }}
+<!DOCTYPE html>
+
+<html>
+  <body>
+    <h1>Timeline</h1>
+    <p>{{.ErrorMsg}}</p>
+    <ul>
+    {{ range . }}
+    <li>
+      <p> {{.Title}} </p>
+      <p> {{.Description}} </p>
+      <p> {{ formatDate .CreatedAt }} </p>
+    </li>
+    {{ end }}
+    </ul>
+  </body>
+</html>
+{{ end }}
